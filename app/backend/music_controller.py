@@ -35,3 +35,7 @@ class MusicController:
 
     def stop_music(self):
         pygame.mixer.music.stop()
+
+    def set_volume(self, volume):
+        # volume is expected to be between 0 and 1
+        pygame.mixer.music.set_volume(volume)

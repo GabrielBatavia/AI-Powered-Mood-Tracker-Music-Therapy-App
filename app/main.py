@@ -27,6 +27,9 @@ class MainWindow(QMainWindow):
         # Kirim notifikasi langsung saat app dijalankan
         self.send_notification()
 
+        # Connect slider volume to update_volume method
+        self.ui.volume_slider.valueChanged.connect(self.update_volume)
+
         # Timer untuk notifikasi setiap 10 detik
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.send_notification)
@@ -37,6 +40,11 @@ class MainWindow(QMainWindow):
 
     def play_music(self):
         self.music_controller.play_playlist('playlist1')  # Memutar playlist dummy
+
+    def update_volume(self):
+        volume = self.ui.volume_slider.value() / 100  # Convert to range 0-1
+        print(f"Volume slider moved, new volume: {volume}")  # Debug print
+        self.music_controller.set_volume(volume)
 
     def send_notification(self):
         try:

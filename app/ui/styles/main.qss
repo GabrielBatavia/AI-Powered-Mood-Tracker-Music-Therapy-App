@@ -1,0 +1,98 @@
+/* Gaya untuk QMainWindow */
+QMainWindow {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Gaya untuk QLabel */
+QLabel {
+    font-size: 14px;
+    color: #e0e0e0;
+    padding: 5px;
+    border: none;
+}
+
+#result_label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00d4ff;
+    border: none;
+    margin: 10px 0;
+}
+
+#notification_label {
+    font-size: 12px;
+    color: #aaaaaa;
+    background: #2a2a3d;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3e3e5e;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk QLabel camera */
+#camera_label {
+    background-color: #2a2a3d;
+    border: 2px dashed #3e3e5e;
+    border-radius: 10px;
+}
+
+/* Gaya untuk QPushButton */
+QPushButton {
+    background-color: #3a3a5e;
+    color: #f0f0f0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+QPushButton:hover {
+    background-color: #4e4e7f;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+    background-color: #6b6b99;
+    color: #dcdcdc;
+    transform: scale(0.98);
+}
+
+/* Gaya untuk QSlider */
+QSlider::groove:horizontal {
+    height: 8px;
+    background: #3e3e5e;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #00d4ff;
+    border: 2px solid #00a3cc;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin: -4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #00e5ff;
+    border-color: #00b8d4;
+}
+
+QSlider::sub-page:horizontal {
+    background: #00d4ff;
+    border-radius: 4px;
+}
+
+/* Layout margin fix */
+QVBoxLayout, QHBoxLayout {
+    margin: 0;
+    spacing: 10px;
+}
